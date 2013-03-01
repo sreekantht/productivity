@@ -17,3 +17,12 @@
 == Licence
 
 MIT
+
+== Include
+
+User:
+*sign up
+*sign in
+*auto sign in when sign up
+*logout
+*user nav
