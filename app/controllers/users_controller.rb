@@ -21,7 +21,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to @user, notice: 'User was successfully created.'
+      session[:user_id] = @user.id # auto sign in
+      redirect_to root_url, notice: 'User was successfully created.'
     else
       render action: "new"
     end
