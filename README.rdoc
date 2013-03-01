@@ -1,0 +1,19 @@
+== Bootstrap app
+
+- Rails3 bootstrap app
+
+== Installation
+
+  git clone https://github.com/sdmgithub/bootstrap.git 
+  cd bootstrap
+  bundle
+  rake db:migrate
+  rails server
+
+== Usage	
+
+- modify routes.rb, to have root_url before running the app
+
+== Licence
+
+MIT
