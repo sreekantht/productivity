@@ -1,28 +1,25 @@
-== Bootstrap app
+== Productivity
 
-- Rails3 bootstrap app
+- Rails3 simple task manager app; based on sdmgithub/bootstrap
 
 == Installation
 
-  git clone https://github.com/sdmgithub/bootstrap.git 
-  cd bootstrap
+  git clone https://github.com/sdmgithub/productivity.git 
+  cd productivity
   bundle
   rake db:migrate
   rails server
 
-== Usage	
-
-- modify routes.rb, to have root_url before running the app
-
+== Todo
+  belongs_to :user
+  acts_as_list scope: :user_id
+  scope :popular, lambda(term) { where(name: 'like %?%', term) }
+- Create resource Task
+  - name        # 'Wash dishes'
+  - user_id     # 1
+  - position    # 1
+  - completed_at # false
+  
 == Licence
 
 MIT
-
-== Include
-
-User:
-*sign up
-*sign in
-*auto sign in when sign up
-*logout
-*user nav
