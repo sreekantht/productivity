@@ -1,9 +1,6 @@
 Bootstrap::Application.routes.draw do
   
   resources :users
-
-
-  resources :users
   get 'signup' => 'users#new', as: :signup
 
   resources :sessions
